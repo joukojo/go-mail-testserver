@@ -31,6 +31,6 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
       - name: Push Docker image
         run: |
-          docker tag mail-testserver:latest ${secrets.DOCKER_HUB_USERNAME}/mailserver:develop
-          docker push ${secrets.DOCKER_HUB_USERNAME}/mailserver:develop
+          docker tag mail-testserver:latest ${{secrets.DOCKER_HUB_USERNAME}}/mailserver:develop
+          docker push ${{secrets.DOCKER_HUB_USERNAME}}/mailserver:develop
     
