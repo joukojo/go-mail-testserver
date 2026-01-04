@@ -58,4 +58,4 @@ tidy:
 	@$(GO) mod tidy
 
 
-ci: tidy fmt test vuln
+ci: tools tidy fmt test vuln
