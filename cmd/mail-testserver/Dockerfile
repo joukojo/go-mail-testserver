@@ -2,7 +2,7 @@ FROM joukojo/golang:latest AS builder
 
 WORKDIR /app
 COPY . .
-RUN go build -buildvcs=false -o mail-testserver ./cmd/mail-testserver
+RUN go build -o mail-testserver ./cmd/mail-testserver
 
 FROM debian:trixie-slim
 
