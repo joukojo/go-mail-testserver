@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - 'develop'
+      - 'release/**'
+    tags:
+      - 'v*'
 jobs:
   ci:
     name: Run CI
