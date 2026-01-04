@@ -1,0 +1,7 @@
+#!/bin/bash
+set -euo pipefail
+
+echo "[pre-commit] running format + lint + tests (fast)..."
+make fmt
+make lint
+make test
