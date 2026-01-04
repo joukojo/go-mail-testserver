@@ -37,8 +37,6 @@ tools:
 	@$(GO) install golang.org/x/vuln/cmd/govulncheck@$(GOVULNCHECK_VERSION)
 	@echo install golangci-lint
 
-
-
 fmt: format
 format:
 	@echo "Formatting..."
@@ -59,3 +57,7 @@ tidy:
 
 
 ci: tools tidy fmt test vuln
+
+image:
+	
+	docker build --pull  -t $(PROJECT) -f cmd/mail-testserver/Dockerfile .
